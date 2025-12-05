@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 14 • Kehidupan di Bawah Air 🌊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Times New Roman', serif !important; }
+        body {
+            
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            
+            color: #003d73;
+        }
+        /* Header */
+        .header-section {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(#4dbbff, #006bb3);
+            color: white;
+        }
+        .header-section h1 {
+            font-family: 'Pacifico', cursive !important;
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        /* Navigation */
+        .fun-menu-container {
+            background-color: #007acc;
+            padding: 10px;
+            position: relative;
+            z-index: 20; /* memastikan dropdown berada di atas */
+        }
+        .fun-menu li {
+            position: relative; /* supaya dropdown bisa tampil */
+        }
+        .fun-menu-container {
+            background-color: #007acc;
+            padding: 10px;
+        }
+        .fun-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .fun-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Main */
+        .welcome-section {
+            padding: 30px;
+            text-align: center;
+        }
+        .sparkle-title {
+            font-family: 'Pacifico', cursive !important;
+            font-size: 35px;
+            font-weight: 600;
+            color: #005b99;
+        }
+        .columnside img, .columnside2 img {
+            width: 280px;
+            height: 180px;
+            border-radius: 12px;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .columnside, .columnside2 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        /* Fun Boxes */
+        .topics-section {
+            padding: 40px;
+        }
+        .sparkle-title2 {
+            font-family: 'Pacifico', cursive !important;
+            text-align: center;
+            font-size: 32px;
+            color: #004f8a;
+        }
+        .fun-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .fun-box {
+            background-color: white;
+            border-left: 8px solid #0099ff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* Footer */
+        .footer-section {
+            background: #005c99;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+    
+        /* Dropdown */
+        /* FIX CLICK — elevasi navigasi dan dropdown */
+        .fun-menu-container {
+            position: relative;
+            z-index: 9999 !important;
+        }
+        .dropdown {
+            position: relative;
+            z-index: 9999;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0099ff;
+            min-width: 160px;
+            border-radius: 10px;
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 99999 !important;
+            pointer-events: auto;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            pointer-events: auto;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0099ff;
+            min-width: 160px;
+            border-radius: 10px;
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 5;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .dropdown-content a:hover {
+            background-color: #007acc;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+@keyframes oceanGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+</style>
+</head>
+<body>
+
+<!-- Video Background -->
+<video autoplay muted loop playsinline id="bg-video" style="position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;">
+    <source src="f1.mp4" type="image">
+</video>
+
+<img src="Menjaga Laut, Menjaga Masa Depan.gif" alt="Banner Atas" style="width:100%;border-radius:0;display:block;">
+
+<header class="header-section">
+    <h1>SDG 14 — Kehidupan di Bawah Air 🌊🐟</h1>
+    <p>Melindungi dan Melestarikan Ekosistem Laut untuk Masa Depan</p>
+</header>
+
+<nav class="fun-menu-container">
+    <ul class="fun-menu">
+        <li><a href="#">🏠 Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">🌊 SDG 14</a>
+            <ul class="dropdown-content">
+                <li><a href="#pengertian">Apa itu SDG 14?</a></li>
+                <li><a href="#tujuan">Tujuan SDG 14</a></li>
+                <li><a href="#ancaman">Ancaman Laut</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">🐟 Ekosistem Laut</a>
+            <ul class="dropdown-content">
+                <li><a href="#terumbu">Terumbu Karang</a></li>
+                <li><a href="#biota">Biota Laut</a></li>
+                <li><a href="#habitat">Habitat Laut</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">🚢 Upaya Pelestarian</a>
+            <ul class="dropdown-content">
+                <li><a href="#polusi">Pengurangan Polusi</a></li>
+                <li><a href="#perikanan">Perikanan Berkelanjutan</a></li>
+                <li><a href="#kampanye">Kampanye Laut Bersih</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <section class="welcome-section">
+        <h2 class="sparkle-title">Selamat Datang Penjelajah Laut! 🌊✨</h2>
+        <p>
+            SDG 14 berfokus pada menjaga keberlanjutan ekosistem laut dan pesisir. Laut adalah rumah bagi jutaan
+            makhluk hidup dan menjadi sumber kehidupan bagi manusia. Yuk, kita cari tahu bagaimana cara kita
+            melestarikan kehidupan di bawah air!
+        </p>
+    </section>
+
+    <div class="columnside">
+        <img src="q1.jpg" alt="Ocean Life">
+        <img src="q5.jpg" alt="Coral Reef">
+        <img src="q3.jpg" alt="Marine Animals">
+    </div>
+
+    <div class="columnside2">
+        <img src="q4.jpg" alt="Pollution Awareness">
+        <img src="q5.jpg" alt="Sustainable Fishing">
+        <img src="q6.jpg" alt="Clean Seas">
+    </div>
+
+    <section class="topics-section">
+        <h2 class="sparkle-title2">Kenapa SDG 14 Penting? 🌐🐬</h2>
+        <div class="fun-box-container">
+            <div class="fun-box">
+                <h3>🌟 Melindungi Ekosistem Laut</h3>
+                <p>Ekosistem laut sangat penting untuk menjaga keseimbangan alam, mendukung keanekaragaman hayati,
+                    dan menyediakan oksigen bagi Bumi.</p>
+            </div>
+            <div class="fun-box">
+                <h3>🐠 Mengurangi Polusi Laut</h3>
+                <p>Sampah plastik dan limbah industri merusak habitat laut. Kita perlu mengurangi pencemaran agar
+                    makhluk laut tetap hidup.</p>
+            </div>
+            <div class="fun-box">
+                <h3>🚢 Menjaga Keberlanjutan Perikanan</h3>
+                <p>Perikanan yang berlebihan dapat menyebabkan kepunahan spesies. Praktik perikanan berkelanjutan
+                    penting untuk menjaga populasi ikan.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ▼▼▼ DESKRIPSI MENU NAVIGATOR ▼▼▼ -->
+
+    <section id="pengertian" class="topics-section">
+        <img src="q1.jpg"pengertian image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Apa itu SDG 14? 🌊</h2>
+        <p>SDG 14 adalah tujuan pembangunan berkelanjutan yang berfokus pada menjaga dan melindungi kehidupan di bawah laut. Tujuannya adalah memastikan laut tetap sehat, bersih, dan menjadi sumber kehidupan bagi generasi sekarang dan mendatang.</p>
+    </section>
+
+    <section id="tujuan" class="topics-section">
+        <img src="d7.avif" alt="tujuan image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Tujuan SDG 14 🎯</h2>
+        <p>SDG 14 memiliki beberapa target, seperti mengurangi polusi laut, melindungi ekosistem pesisir, serta memastikan praktik perikanan berkelanjutan. Semua ini dilakukan agar ekosistem laut tetap terjaga.</p>
+    </section>
+
+    <section id="ancaman" class="topics-section">
+        <img src="d7.jpg" alt="ancaman image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Ancaman Terhadap Laut ⚠️</h2>
+        <p>Perubahan iklim, sampah plastik, dan penangkapan ikan berlebihan adalah ancaman besar bagi kesehatan laut. Tanpa tindakan nyata, keanekaragaman hayati laut akan menurun drastis.</p>
+    </section>
+
+    <section id="terumbu" class="topics-section">
+        <img src="d6.jpg" alt="terumbu image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Terumbu Karang 🐠🌺</h2>
+        <p>Terumbu karang adalah ekosistem laut yang sangat kaya dan indah. Namun, terumbu sangat rentan terhadap pencemaran dan pemanasan global yang menyebabkan pemutihan karang.</p>
+    </section>
+
+    <section id="biota" class="topics-section">
+        <img src="d5.webp" alt="biota image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Biota Laut 🐬🐙</h2>
+        <p>Biota laut mencakup berbagai makhluk hidup seperti ikan, lumba-lumba, ubur-ubur, hingga plankton. Mereka memiliki peran penting dalam menjaga keseimbangan ekosistem laut.</p>
+    </section>
+
+    <section id="habitat" class="topics-section">
+        <img src="d4.avif" alt="habitat image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Habitat Laut 🌍</h2>
+        <p>Habitat laut terdiri atas zona-zona berbeda seperti zona pesisir, laut dalam, dan padang lamun. Setiap habitat memiliki makhluk hidup unik yang harus dilindungi.</p>
+    </section>
+
+    <section id="polusi" class="topics-section">
+        <img src="d3.jpeg" alt="polusi image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Pengurangan Polusi Laut 🚯</h2>
+        <p>Mengurangi polusi dapat dilakukan dengan mengurangi penggunaan plastik sekali pakai, menjaga kebersihan pantai, dan memastikan industri tidak membuang limbah ke laut.</p>
+    </section>
+
+    <section id="perikanan" class="topics-section">
+        <img src="d7.jpg" alt="perikanan image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Perikanan Berkelanjutan 🎣</h2>
+        <p>Perikanan berkelanjutan memastikan bahwa ikan ditangkap tanpa merusak populasi dan ekosistemnya, sehingga generasi mendatang masih dapat menikmatinya.</p>
+    </section>
+
+    <section id="kampanye" class="topics-section">
+        <img src="d2.jpg" alt="kampanye image" style="width:250px;border-radius:12px;float:left;margin:0 20px 20px 0;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <h2 class="sparkle-title2">Kampanye Laut Bersih 🌊✨</h2>
+        <p>Kampanye kebersihan laut mengajak masyarakat untuk peduli terhadap lingkungan dengan melakukan aksi pembersihan pantai, edukasi, dan pengurangan sampah.</p>
+    </section>
+
+    <!-- ▲▲▲ DESKRIPSI MENU NAVIGATOR ▲▲▲ -->
+
+</main>
+
+<footer class="footer-section">
+    <p>© 2024 SDG 14 — Bersama Selamatkan Laut Kita 🌍💙</p>
+</footer>
+
+<img src="Menjaga Laut, Menjaga Masa Depan.gif" alt="Banner Bawah" style="width:100%;border-radius:0;display:block;">
+
+</body>
+</html>
